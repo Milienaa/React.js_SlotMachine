@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: {
+        family: "Gelasio", serif;
+        color: #c4c4c4;
+        weight: 600;
+        style: normal;
+    }
+    text-transform: uppercase;
+}
+
+.slot {
+    &__title {
+        font: {
+                weight: 800;
+                style: normal;
+                size: 40px;
+            }
+        
+        color: #000;
+        margin: 29px auto;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+    &__pics {
+        img {
+            width: 159px;
+            height: auto;
+        }
+        display: grid;
+        grid-template-columns: repeat(4, 159px);
+        grid-gap: 10px;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        padding: 15px;
+        border: 4px dashed #fff;
+        
+    }
+
+    &__tokens {
+        background-color: #fff;
+        .txt {
+            font-size: 40px;
+            color: #c4c4c4;
+        }
+        .token {
+            font-size: 78px;
+        }
+        display: grid;
+        align-content: center;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border-radius: 10px;
+    }
+
+    &__play {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        border-radius: 10px;
+        background-color: #e5e5e5;
+        cursor: pointer;
+        &:hover {
+            background-color: #8b8b8b;
+        }
+        &--disabled {
+            cursor: auto;
+            &:hover {
+                    background-color: #e5e5e5;
+                }
+        }
+
+    }
+
+    &__play, &__count {
+        color: #fff;
+        border: none;
+        font: {
+                family: "Gelasio", serif;
+                weight: 600;
+                style: normal;
+                size: 40px;
+            }
+        text-transform: uppercase;
+    }
+
+    &__count {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        background-color: #c4c4c4;
+        font-size: 26px;
+        padding: 15px;
+        border: 4px dashed #fff;
+        &--active{
+            background-color: #ee3f3f7c;
+        }
+    }
+}
+
+.wrapper {
+    display: grid;
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 50px 230px 38px;
+    background-color: #c4c4c4;
+    grid: {
+        template: {
+            columns: repeat(4, 160px);
+            rows: 1fr 1.8fr 160px 106px;
+        }
+        gap: 25px;
+    }
+    text-align: center;
+    justify-content: center;
+}
+
